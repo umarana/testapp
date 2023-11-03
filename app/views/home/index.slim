@@ -1,0 +1,4 @@
+= mango_frame( logo: { url:'/', src: asset_url("logo.svg") }) do |frame|
+  - frame.with_top_bar do |top_bar|
+    - top_bar.with_user_menu(name: "Test User", detail: "test@test.com") do |user_menu|
+      - user_menu.with_avatar(initials: "UM")

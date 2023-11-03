@@ -1,0 +1,57 @@
+= render(Mango::BaseComponent.new(**system_arguments)) do
+  header
+    - if top_bar.present?
+      = top_bar
+    nav#toggleMobileMenu.bg-gray-50.border-b.border-gray-200.dark:bg-gray-700.dark:border-gray-800
+      .px-4.py-2
+        .flex.items-center
+          ul.flex.items-center.text-sm.text-gray-600.font-medium
+            li.block.lg:inline
+              a.inline-block.px-3.py-2.rounded-lg.hover:text-gray-900.hover:bg-gray-100.dark:hover:bg-gray-600.dark:text-white[href="#"]
+                | Overview
+            li.block.lg:inline
+              a.inline-block.px-3.py-2.rounded-lg.hover:text-gray-900.hover:bg-gray-100.dark:hover:bg-gray-600.dark:text-white[href="#"]
+                | Sales
+            li.block.lg:inline
+              a.inline-block.px-3.py-2.rounded-lg.hover:text-gray-900.hover:bg-gray-100.dark:hover:bg-gray-600.dark:text-white[href="#"]
+                | Billing
+            li.md:block.lg:inline.hidden
+              a.inline-block.px-3.py-2.rounded-lg.hover:text-gray-900.hover:bg-gray-100.dark:hover:bg-gray-600.dark:text-white[href="#"]
+                | Team
+            li.md:block.lg:inline.hidden
+              a.inline-block.px-3.py-2.rounded-lg.hover:text-gray-900.hover:bg-gray-100.dark:hover:bg-gray-600.dark:text-white[href="#"]
+                | Resources
+            li.md:block.lg:inline.hidden
+              a.inline-block.px-3.py-2.rounded-lg.hover:text-gray-900.hover:bg-gray-100.dark:hover:bg-gray-600.dark:text-white[href="#"]
+                | Messages
+            li.md:block.lg:inline.hidden
+              a.inline-block.px-3.py-2.rounded-lg.hover:text-gray-900.hover:bg-gray-100.dark:hover:bg-gray-600.dark:text-white[href="#"]
+                | Support
+            li.block.md:hidden
+              button#navigationDropdownButton.inline-flex.items-center.justify-center.px-2.py-2.rounded-xl.hover:text-gray-900.hover:bg-gray-100.dark:hover:bg-gray-600.dark:text-white[aria-expanded="false" data-dropdown-toggle="navigationDropdown"]
+                svg.h-5.w-5[xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor"]
+                  path[d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"]
+              #navigationDropdown.hidden.z-50.my-4.w-56.text-base.list-none.bg-white.rounded-xl.divide-y.divide-gray-100.shadow.dark:bg-gray-700.dark:divide-gray-600
+                ul.py-1.text-gray-700.dark:text-gray-300[aria-labelledby="navigationDropdownButton"]
+                  li
+                    a.flex.items-center.py-2.px-4.text-sm.hover:bg-gray-100.dark:hover:bg-gray-600.dark:hover:text-white[href="#"]
+                      |  Overview 
+                  li
+                    a.flex.items-center.py-2.px-4.text-sm.hover:bg-gray-100.dark:hover:bg-gray-600.dark:hover:text-white[href="#"]
+                      |  Sales 
+                  li
+                    a.flex.items-center.py-2.px-4.text-sm.hover:bg-gray-100.dark:hover:bg-gray-600.dark:hover:text-white[href="#"]
+                      |  Billing 
+                  li
+                    a.flex.items-center.py-2.px-4.text-sm.hover:bg-gray-100.dark:hover:bg-gray-600.dark:hover:text-white[href="#"]
+                      |  Team 
+                  li
+                    a.flex.items-center.py-2.px-4.text-sm.hover:bg-gray-100.dark:hover:bg-gray-600.dark:hover:text-white[href="#"]
+                      |  Resources 
+                  li
+                    a.flex.items-center.py-2.px-4.text-sm.hover:bg-gray-100.dark:hover:bg-gray-600.dark:hover:text-white[href="#"]
+                      |  Messages 
+                  li
+                    a.flex.items-center.py-2.px-4.text-sm.hover:bg-gray-100.dark:hover:bg-gray-600.dark:hover:text-white[href="#"]
+                      |  Support 
+  main.flex-1.p-4.space-y-4
